@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music player dec 2024</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="music-app ">
+
+            <div class="row">
+
+                <h3>PLAYING NOW</h3>
+
+                <div class="music-details flex-col">
+
+                    <audio src="music/Soch Liya.mp3"></audio>
+
+                    <img src="images/Soch Liya.jpeg" alt="">
+
+                    <h2 class="music-title" id="title">Soch Liya</h2>
+
+                    <h6 class="music-artist" id="artist">Arijit Singh</h2>
+                </div>
+
+                <div class="music-duration">
+                    <div id="current-time">0:00</div>
+                    <input type="range" value="0" id="progress-bar" onchange="musicDurationControl()">
+                    <div id="song-duration">0:00</div>
+                </div>
+
+
+                <div class="song-controls ">
+                    <i class='bx bx-heart' title="Like"></i>
+
+                    <div><i class='bx bx-skip-previous' id="previous" title="Previous"></i></div>
+                    <div><i class='bx bx-play main_button' id="play" title="Play"></i></div>
+                    <div><i class='bx bx-skip-next' id="next" title="Next"></i></div>
+
+                    <div class="volume-bar">
+                        <i class='bx bx-volume-low' title="volume"></i>
+                        <input type="range" min="0" max="100" value="100" id="volume_control"
+                            onchange="volumeControl()">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+     <script src="app.js"></script>
+</body>
+
+</html>
